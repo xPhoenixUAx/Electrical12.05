@@ -534,6 +534,10 @@ button {
   backdrop-filter: blur(16px);
 }
 
+.mobile-call-fab {
+  display: none;
+}
+
 .menu-toggle,
 .mobile-close {
   display: none;
@@ -1041,6 +1045,87 @@ h3 {
 
   .header-actions .btn-primary {
     display: none;
+  }
+
+  body.has-mobile-fab {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-call-fab {
+    position: fixed;
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    z-index: 70;
+    min-width: 112px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 217, 120, 0.42);
+    border-radius: 999px;
+    color: #17120a;
+    background: linear-gradient(135deg, #ffd978, #f0b441 62%, #d58c35);
+    box-shadow:
+      0 16px 36px rgba(18, 20, 23, 0.24),
+      inset 0 1px 0 rgba(255, 255, 255, 0.38);
+    font-size: 0.96rem;
+    font-weight: 850;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(18px);
+    transition:
+      opacity 220ms ease,
+      visibility 220ms ease,
+      transform 220ms ease;
+  }
+
+  .mobile-call-fab.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-call-fab svg {
+    width: 19px;
+    height: 19px;
+    transform-origin: 50% 50%;
+    animation: phone-shake 1.8s ease-in-out infinite;
+  }
+
+  .menu-locked .mobile-call-fab {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(18px);
+  }
+
+  @keyframes phone-shake {
+    0%,
+    58%,
+    100% {
+      transform: rotate(0deg);
+    }
+
+    64% {
+      transform: rotate(-12deg);
+    }
+
+    70% {
+      transform: rotate(10deg);
+    }
+
+    76% {
+      transform: rotate(-8deg);
+    }
+
+    82% {
+      transform: rotate(6deg);
+    }
   }
 
   h1 {

@@ -58,6 +58,25 @@
     header.classList.toggle("is-solid", window.scrollY > 24);
   }
 
+  function initMobileFab() {
+    if (document.querySelector(".mobile-call-fab")) return;
+
+    const fab = document.createElement("a");
+    fab.className = "mobile-call-fab";
+    fab.href = `tel:${config.phone || ""}`;
+    fab.setAttribute("aria-label", config.phoneButtonLabel || "Call");
+    fab.innerHTML = '<i data-lucide="phone"></i><span>Call</span>';
+    document.body.append(fab);
+    document.body.classList.add("has-mobile-fab");
+
+    const setFabState = () => {
+      fab.classList.toggle("is-visible", window.scrollY > 120);
+    };
+
+    setFabState();
+    window.addEventListener("scroll", setFabState, { passive: true });
+  }
+
   function openMobileMenu() {
     if (!mobileMenu || !menuButton) return;
     mobileMenu.classList.add("is-open");
@@ -249,6 +268,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     initPageTransitions();
+    initMobileFab();
     hydrateConfig();
     setHeaderState();
     initMobileMenu();
