@@ -142,8 +142,7 @@
       "commercial-electrical.html",
       "emergency-electrical.html",
       "ev-smart-energy.html",
-      "inspection-panel-upgrades.html",
-      "service-detail.html"
+      "inspection-panel-upgrades.html"
     ]);
 
     document.querySelectorAll(".nav-link, .dropdown-link, .mobile-menu a").forEach((link) => {
@@ -219,7 +218,7 @@
   function initPageTransitions() {
     const loader = document.createElement("div");
     loader.className = "page-loader";
-    loader.innerHTML = '<div class="loader-inner"><span class="loader-mark"></span><span class="loader-title">VoltWise Electrical</span><span class="loader-line"></span></div>';
+    loader.innerHTML = `<div class="loader-inner"><span class="loader-mark"></span><span class="loader-title">${config.companyName || "Service Network"}</span><span class="loader-line"></span></div>`;
     document.body.prepend(loader);
 
     requestAnimationFrame(() => document.body.classList.add("is-loaded"));
