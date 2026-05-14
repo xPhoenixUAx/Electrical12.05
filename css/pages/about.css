@@ -1,0 +1,391 @@
+.about-hero {
+  position: relative;
+  min-height: 58svh;
+  display: grid;
+  align-items: center;
+  padding: 122px 0 64px;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(18, 20, 23, 0.9), rgba(18, 20, 23, 0.68) 52%, rgba(18, 20, 23, 0.35)),
+    url("../../img/common/electrical-architecture.webp") center / cover;
+  overflow: hidden;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(18, 20, 23, 0.22), rgba(18, 20, 23, 0.78)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 120px);
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-statement {
+  max-width: 980px;
+}
+
+.about-hero h1 {
+  max-width: none;
+  font-size: clamp(2.1rem, 4.2vw, 4rem);
+  line-height: 1.02;
+}
+
+.about-hero .lead {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.18vw, 1.12rem);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about-method h2,
+.about-testimonials h2,
+.about-faq h2,
+.about-cta h2 {
+  font-size: clamp(1.85rem, 3.1vw, 3.05rem);
+  line-height: 1.04;
+}
+
+.about-method .lead,
+.about-faq .lead {
+  font-size: clamp(1rem, 1.16vw, 1.12rem);
+}
+
+.about-hero-rail {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  max-width: 960px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.about-hero-rail div {
+  display: grid;
+  gap: 12px;
+  min-height: 120px;
+  padding: 20px;
+  background: rgba(18, 20, 23, 0.58);
+  backdrop-filter: blur(14px);
+}
+
+.about-hero-rail strong {
+  color: var(--amber);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+}
+
+.about-hero-rail span {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.35;
+}
+
+.about-method {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(184, 111, 53, 0.1), transparent 24rem),
+    linear-gradient(180deg, #efe7d8, #f6f2ea);
+}
+
+.about-method-editorial {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.74fr) minmax(0, 0.88fr);
+  gap: clamp(34px, 5vw, 68px);
+  align-items: center;
+  max-width: 1120px;
+}
+
+.method-photo {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.method-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 46%, rgba(18, 20, 23, 0.42));
+}
+
+.method-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.94) contrast(1.01);
+}
+
+.method-content {
+  display: grid;
+  align-content: center;
+  gap: 26px;
+  max-width: 620px;
+}
+
+.method-content .lead {
+  max-width: 560px;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.16vw, 1.12rem);
+  color: var(--ink-soft);
+}
+
+.method-story {
+  max-width: 580px;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.method-story p {
+  margin-bottom: 16px;
+}
+
+.method-standards {
+  display: grid;
+  gap: 0;
+  max-width: 600px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(18, 20, 23, 0.13);
+}
+
+.method-standards div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 8px 14px;
+  align-items: start;
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(18, 20, 23, 0.13);
+}
+
+.method-standards div:last-child {
+  border-bottom: 1px solid rgba(18, 20, 23, 0.13);
+}
+
+.method-standards svg {
+  width: 21px;
+  height: 21px;
+  color: var(--copper);
+}
+
+.method-standards strong {
+  align-self: center;
+  color: var(--ink);
+}
+
+.method-standards span {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.about-testimonials {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(28, 109, 143, 0.12), transparent 26rem),
+    linear-gradient(180deg, #f6f2ea, #ebe0cf);
+}
+
+.about-testimonials .section-head {
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.about-testimonials .section-head h2 {
+  max-width: 760px;
+}
+
+.about-swiper-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-self: end;
+}
+
+.about-swiper-controls button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(18, 20, 23, 0.14);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: rgba(255, 250, 241, 0.78);
+}
+
+.about-review-swiper {
+  position: relative;
+  overflow: hidden;
+  padding: 0 2px 44px;
+}
+
+.about-review-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.about-review-swiper .swiper-slide {
+  height: auto;
+}
+
+.about-review {
+  height: 100%;
+  min-height: 310px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 26px;
+  border: 1px solid rgba(18, 20, 23, 0.11);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 241, 0.88), rgba(246, 242, 234, 0.74));
+  box-shadow: 0 12px 36px rgba(18, 20, 23, 0.055);
+}
+
+.about-review svg {
+  width: 24px;
+  height: 24px;
+  color: var(--copper);
+}
+
+.about-review p {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.about-review strong,
+.about-review span {
+  display: block;
+}
+
+.about-review strong {
+  margin-top: auto;
+}
+
+.about-review span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.about-swiper-pagination {
+  bottom: 0 !important;
+}
+
+.about-swiper-pagination .swiper-pagination-bullet {
+  width: 22px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(18, 20, 23, 0.28);
+  opacity: 1;
+}
+
+.about-swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--copper);
+}
+
+.about-faq {
+  background: var(--paper);
+}
+
+.about-faq .faq-list {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.about-cta {
+  padding-top: 36px;
+  background: var(--paper);
+}
+
+.about-cta-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: clamp(30px, 4.4vw, 54px);
+  border-radius: var(--radius);
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(18, 20, 23, 0.94), rgba(18, 20, 23, 0.68)),
+    url("../../img/services/services-directory-hero.webp") center / cover;
+  box-shadow: 0 24px 70px rgba(18, 20, 23, 0.18);
+}
+
+.about-cta-panel h2 {
+  max-width: 720px;
+}
+
+.about-cta-panel p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.about-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.about-cta-actions .btn-ghost {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 980px) {
+  .about-method-editorial,
+  .about-cta-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .method-photo {
+    min-height: 360px;
+  }
+
+  .method-standards {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .method-standards div {
+    grid-template-columns: 32px 1fr;
+  }
+
+  .method-standards span {
+    grid-column: 2;
+  }
+
+  .about-hero {
+    min-height: auto;
+  }
+
+  .about-hero-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-actions,
+  .about-swiper-controls {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-hero {
+    padding-top: 118px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+  }
+
+}
