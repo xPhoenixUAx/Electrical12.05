@@ -379,9 +379,126 @@
 
   .prep-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
+    background: rgba(255, 250, 241, 0.92);
+    gap: 0;
   }
 
   .prep-image {
-    min-height: 280px;
+    min-height: 230px;
+  }
+
+  .prep-item {
+    width: 100%;
+    max-width: 360px;
+    min-height: auto;
+    justify-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .prep-item:last-child {
+    border-bottom: 0;
+  }
+
+  .prep-item svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .prep-item strong {
+    font-size: 0.98rem;
+  }
+
+  .prep-item span {
+    max-width: 280px;
+    font-size: 0.86rem;
+    line-height: 1.38;
+  }
+
+  .service-directory {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(84%, 1fr);
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 14px;
+    padding: 0 14px 18px;
+    margin-inline: -14px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-directory::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .service-directory::-webkit-scrollbar-track {
+    background: rgba(18, 20, 23, 0.08);
+  }
+
+  .service-directory::-webkit-scrollbar-thumb {
+    background: rgba(184, 111, 53, 0.55);
+    border-radius: 999px;
+  }
+
+  .service-group-card,
+  .service-group-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px minmax(390px, 1fr);
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .service-group-card:nth-child(even) .group-image {
+    order: 0;
+  }
+
+  .group-image {
+    min-height: 0;
+    height: 210px;
+  }
+
+  .group-image img {
+    height: 100%;
+  }
+
+  .group-content {
+    min-height: 390px;
+    align-content: stretch;
+    grid-template-rows: auto auto 1fr auto;
+    padding: 22px;
+  }
+
+  .group-content ul {
+    align-content: start;
+  }
+
+  .group-content .btn {
+    width: 100%;
+    justify-content: center;
+    align-self: end;
+  }
+
+  .group-content p,
+  .group-content li {
+    font-size: 0.92rem;
+    line-height: 1.48;
+  }
+
+  .group-title h3 {
+    font-size: 1.25rem;
+  }
+
+  .group-actions .btn {
+    width: 100%;
+    min-height: 38px;
+    padding: 9px 12px;
+    font-size: 0.86rem;
   }
 }
