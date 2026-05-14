@@ -619,6 +619,10 @@
   color: var(--white);
 }
 
+.testimonial-mobile-slider {
+  display: none;
+}
+
 .testimonial-list {
   display: grid;
   gap: 14px;
@@ -798,32 +802,180 @@
 }
 
 @media (max-width: 620px) {
+  .hero {
+    min-height: 78svh;
+    align-items: center;
+    padding: 112px 0 54px;
+    text-align: center;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(14, 16, 18, 0.72) 0%,
+        rgba(14, 16, 18, 0.76) 48%,
+        rgba(14, 16, 18, 0.9) 100%
+      ),
+      url("../../img/home/hero-electrical-services.webp") center / cover;
+  }
+
+  .hero .lead {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
   .hero-grid,
   .finder-lead,
-  .finder-grid,
   .finder-checklist,
   .process-board,
   .process-rail {
     grid-template-columns: 1fr;
   }
 
+  .finder-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(78%, 1fr);
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;
+    padding: 0 16px 18px;
+    margin-inline: -16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .finder-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .finder-grid::-webkit-scrollbar-track {
+    background: rgba(18, 20, 23, 0.08);
+  }
+
+  .finder-grid::-webkit-scrollbar-thumb {
+    background: rgba(184, 111, 53, 0.55);
+    border-radius: 999px;
+  }
+
   .finder-card {
-    min-height: auto;
+    min-height: 280px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .process-rail::before {
-    left: 30px;
-    top: 28px;
-    bottom: 28px;
+    display: none;
   }
 
   .process-step {
     min-height: auto;
-    padding: 26px;
+    gap: 10px;
+    padding: 20px 22px;
+  }
+
+  .process-number {
+    font-size: 0.76rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.18rem;
+    line-height: 1.12;
+  }
+
+  .process-step p {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .process-icon {
+    right: 14px;
+    bottom: 8px;
+  }
+
+  .process-icon svg {
+    width: 86px;
+    height: 86px;
   }
 
   .testimonial-card {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-list {
+    display: none;
+  }
+
+  .testimonial-feature {
+    min-height: 430px;
+    align-content: start;
+    padding: 24px 0 24px;
+  }
+
+  .testimonial-feature > p,
+  .testimonial-feature > .testimonial-person,
+  .testimonial-feature > .testimonial-route {
+    display: none;
+  }
+
+  .testimonial-feature::after {
+    inset: 14px;
+  }
+
+  .testimonial-mobile-slider {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(86%, 1fr);
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
+    padding: 0 24px 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonial-mobile-slider::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .testimonial-mobile-slider::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  .testimonial-mobile-slider::-webkit-scrollbar-thumb {
+    background: rgba(240, 180, 65, 0.72);
+    border-radius: 999px;
+  }
+
+  .testimonial-mobile-slide {
+    min-height: 245px;
+    display: grid;
+    align-content: start;
+    gap: 16px;
+    padding: 22px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    background: rgba(18, 20, 23, 0.58);
+    backdrop-filter: blur(14px);
+  }
+
+  .testimonial-mobile-slide p {
+    margin: 0;
+    font-size: 1.06rem;
+    line-height: 1.36;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .testimonial-mobile-slide strong {
+    color: var(--white);
   }
 
   .testimonial-card strong {

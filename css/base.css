@@ -1005,6 +1005,40 @@ h3 {
     width: min(calc(100% - 28px), var(--max));
   }
 
+  .mobile-panel {
+    width: min(calc(100% - 28px), 780px);
+    padding-block: 24px;
+  }
+
+  .mobile-top {
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .mobile-menu .brand {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .mobile-menu .brand-mark {
+    width: 62px;
+    height: 42px;
+  }
+
+  .mobile-menu .brand [data-company-name] {
+    max-width: 210px;
+    font-size: clamp(0.9rem, 4.1vw, 1.05rem);
+    line-height: 0.98;
+    padding-bottom: 5px;
+  }
+
+  .mobile-close {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+  }
+
   .header-actions .btn-primary {
     display: none;
   }
