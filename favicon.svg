@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VoltWise favicon">
+  <defs>
+    <linearGradient id="plate" x1="10" y1="4" x2="54" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#252525"/>
+      <stop offset="1" stop-color="#0f1215"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="22" y1="8" x2="43" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd978"/>
+      <stop offset=".48" stop-color="#f0b441"/>
+      <stop offset="1" stop-color="#b86f35"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="7" width="54" height="50" rx="10" fill="url(#plate)"/>
+  <path d="M15 44.5h34.5L52 19.5H17.5L15 44.5Z" fill="none" stroke="#b86f35" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M35.8 11.5 22.5 34h10l-4.4 18.5L42 28.5H31.8l4-17Z" fill="url(#bolt)"/>
+  <path d="M18.5 45h27" stroke="#ffd978" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+</svg>
